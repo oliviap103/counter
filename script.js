@@ -1,32 +1,22 @@
-class Counter {
-  constructor(displayTextElement){
-    this.displayTextElement = displayTextElement
-    this.reset()
-  }
-
-  reset() {
-
-  }
-
-  increase() {
-
-  }
-
-  decrease() {
-
-  }
-}
-
 // variables needed
-
-const increaseButton = document.querySelector('.increase')
-const decreaseButton = document.querySelector('.decrease')
-const displayTextElement = document.querySelector('.display')
-
-const counter = new Counter(displayTextElement)
+let increaseButton = document.querySelector('#increase');
+let decreaseButton = document.querySelector('#decrease');
+let displayTextElement = document.querySelector('#display');
+let count = 0;
+updateDisplay();
 
 // event listeners for both buttons
-
 increaseButton.addEventListener('click', () => {
-
+  count ++;
+  updateDisplay();
 })
+
+decreaseButton.addEventListener('click', () => {
+  count --;
+  updateDisplay();
+})
+
+// functions
+function updateDisplay() {
+  displayTextElement.innerHTML = count;
+}
