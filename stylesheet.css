@@ -13,6 +13,10 @@ button {
   background-color: rgb(201, 244, 229);
   font-size: 100px;
   cursor: pointer;
+  color: rgb(108, 221, 183);
+}
+
+button:hover {
   color: rgb(25, 219, 154);
 }
 
